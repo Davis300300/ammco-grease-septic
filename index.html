@@ -109,20 +109,10 @@ p{margin:0}
 
 /* STATS */
 .stats{background:var(--green);color:var(--green-fg)}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:22px 20px 20px 0;border-right:1px solid rgba(12,20,52,.22);display:grid;gap:2px}
-.stat+.stat{padding-left:22px}
-.stat:last-child{border-right:0}
+.stats .wrap{display:flex;justify-content:center}
+.stat{padding:22px 0 20px;display:grid;gap:2px;justify-items:center;text-align:center}
 .stat b{font-family:var(--display);font-stretch:112.5%;font-size:clamp(28px,2.8vw,36px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;text-transform:uppercase;white-space:nowrap}
 .stat span{font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
-@media (max-width:760px){
-  .stats .wrap{grid-template-columns:1fr 1fr}
-  .stat{border-right:0;border-bottom:1px solid rgba(12,20,52,.22);padding-left:0}
-  .stat+.stat{padding-left:0}
-  .stat:nth-child(odd){border-right:1px solid rgba(12,20,52,.22);padding-right:16px}
-  .stat:nth-child(even){padding-left:16px}
-  .stat:nth-last-child(-n+2){border-bottom:0}
-}
 
 /* CUSTOMERS */
 .trusted{padding-block:clamp(48px,6vw,80px);border-bottom:1px solid var(--line)}
@@ -168,7 +158,7 @@ p{margin:0}
 @media (max-width:520px){.steps{grid-template-columns:1fr}}
 
 /* COMPLIANCE */
-.comp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.comp{display:grid;grid-template-columns:1fr;max-width:76ch;gap:clamp(24px,4vw,56px);align-items:center}
 .comp-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
 .comp-list li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
 .comp-list svg{width:26px;height:26px;stroke:var(--green);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
@@ -269,7 +259,7 @@ p{margin:0}
   <div class="wrap">
     <div>
       <p class="eyebrow">Commercial grease trap, lift station &amp; septic service · Southeast Texas &amp; Southwest Louisiana</p>
-      <h1>Serviced on schedule.<br><em>Documented</em> every time.</h1>
+      <h1>Reliable commercial<br>grease trap &amp; <em>septic service.</em></h1>
       <p class="lede">AMMCO Grease &amp; Septic keeps restaurants, properties and municipal lift stations running and inspection-ready. Commercial accounts only, on a route, with a service record after every visit.</p>
       <div class="hero-actions">
         <a class="btn btn-blue" href="#contact">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -289,10 +279,7 @@ p{margin:0}
 
 <section class="stats" aria-label="Key facts">
   <div class="wrap">
-    <div class="stat"><b>390+</b><span>Locations on route</span></div>
-    <div class="stat"><b>224</b><span>Accounts in the Lake Charles metro</span></div>
     <div class="stat"><b>LA · TX · AR</b><span>Service footprint</span></div>
-    <div class="stat"><b>Quarterly</b><span>Typical service cadence</span></div>
   </div>
 </section>
 
@@ -424,20 +411,6 @@ p{margin:0}
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Next-due date set on the record</b><p>Interval based on the measured grease layer and your local ordinance. You will hear from us before it comes up.</p></div></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Registered liquid waste transporter</b><p>Permitted to haul grease, septage and sewage in Texas and Louisiana. Registration numbers available on request for your vendor file.</p></div></li>
         </ul>
-      </div>
-      <div class="record" aria-label="Sample service record">
-        <div class="record-head"><span>Service record · Sample</span><span>Ticket GS-24817</span></div>
-        <table>
-          <tr><td>Site</td><td>Full-service restaurant, Beaumont TX</td></tr>
-          <tr><td>Unit</td><td>Outdoor interceptor, 1,500 gal, 2 compartments</td></tr>
-          <tr><td>Grease + solids on arrival</td><td>31% of liquid depth</td></tr>
-          <tr><td>Volume pumped</td><td>1,480 gal</td></tr>
-          <tr><td>Baffles, tees, lids</td><td class="ok">Intact, resealed</td></tr>
-          <tr><td>Photos</td><td>Before <span class="photo"></span> After <span class="photo"></span></td></tr>
-          <tr><td>Manifest</td><td>LW-TX-0391-2026</td></tr>
-          <tr><td>Receiving facility</td><td>Permitted, Jefferson County</td></tr>
-          <tr><td>Next due</td><td class="ok">28 days · on route</td></tr>
-        </table>
       </div>
     </div>
   </div>
