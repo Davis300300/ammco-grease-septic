@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Request Service | AMMCO Grease &amp; Septic | Houston, Beaumont, Lake Charles</title>
+<meta name="description" content="Request grease trap, septic, lift station or portable restroom service from AMMCO Grease &amp; Septic in Texas, Louisiana and Arkansas.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112.5,600;112.5,700;112.5,800&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="AMMCO Grease and Septic, home"><img src="assets/img/logo-white.webp" alt="AMMCO Grease &amp; Septic" width="900" height="246"></a>
+    <a class="nav-phone" data-phone hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-phone-text></span></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="portable-restrooms.html">Portable restrooms</a></li>
+      <li><a href="index.html#who-we-serve">Who we serve</a></li>
+      <li><a href="index.html#compliance">Compliance</a></li>
+    </ul>
+    <a class="btn btn-blue" href="request-service.html">Request service</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero page-hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Request service</p>
+      <h1>Tell us what you need</h1>
+      <p class="lede">Send the details and the office will follow up with a service window and a price. For anything urgent, call.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap contact">
+    <form class="form" id="reqForm" novalidate>
+      <div class="frow">
+        <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Business or agency<input type="text" name="business" autocomplete="organization" required></label>
+      </div>
+      <div class="frow">
+        <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email"></label>
+      </div>
+      <div class="frow">
+        <label>Service needed
+          <select name="service">
+            <option>Grease trap or interceptor pumping</option>
+            <option>Septic or holding tank pumping</option>
+            <option>Sewage pumping</option>
+            <option>Lift station pumping and cleaning</option>
+            <option>Drain line jetting</option>
+            <option>Portable restroom rental</option>
+            <option>Set up recurring service</option>
+          </select>
+        </label>
+        <label>Site address or city<input type="text" name="site" autocomplete="street-address"></label>
+      </div>
+      <label>Details<textarea name="message" placeholder="Tank or trap size, number of locations or units, dates, anything the crew should know."></textarea></label>
+      <div class="form-foot">
+        <button type="submit" class="btn btn-blue">Send request</button>
+        <small>Urgent? Call the office.</small>
+      </div>
+      <div class="sent" id="sent" hidden>
+        <strong>This preview page does not send yet.</strong>
+        <p style="color:var(--muted);font-size:14.5px">The form will be connected to the dispatch inbox before launch. For now, copy the request below.</p>
+        <pre id="sentText"></pre>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" id="copyReq">Copy request</button>
+          <span id="copyMsg" style="font-size:13px;color:var(--muted)"></span>
+        </div>
+      </div>
+    </form>
+    <aside class="aside">
+      <div class="aside-block">
+        <span class="k">Office phone</span>
+        <a class="cta-phone" data-phone hidden></a>
+        <span class="pending" data-phone-pending>Phone number to be confirmed</span>
+      </div>
+      <div class="aside-block">
+        <span class="k">Email</span>
+        <a class="textlink" data-email hidden style="font-size:18px"></a>
+        <span class="pending" data-email-pending>Dispatch email to be confirmed</span>
+      </div>
+      <div>
+        <div class="office"><b>Houston office</b><p>1812 W D Street, La Porte, TX 77571</p></div>
+        <div class="office"><b>Beaumont, TX</b><p>1115 Wescalder Rd, Beaumont, TX 77707</p></div>
+        <div class="office"><b>Lake Charles, LA</b><p>5117 Hwy 90 E, Lake Charles, LA 70615</p></div>
+        <div class="office"><b>Service area</b><p>Texas, Louisiana and Arkansas</p></div>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="AMMCO Grease and Septic, home" style="margin-bottom:16px"><img src="assets/img/logo-white.webp" alt="AMMCO Grease &amp; Septic" width="900" height="246"></a>
+        <p style="max-width:38ch">Grease trap, septic, lift station and portable restroom service across Texas, Louisiana and Arkansas.</p>
+        <a class="foot-phone" data-phone hidden></a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#grease">Grease</a></li>
+          <li><a href="index.html#septic">Septic &amp; sewage</a></li>
+          <li><a href="index.html#lift-stations">Lift stations</a></li>
+          <li><a href="portable-restrooms.html">Portable restrooms</a></li>
+          <li><a href="request-service.html">Request service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul>
+          <li>Houston office: 1812 W D Street, La Porte, TX 77571</li>
+          <li>Beaumont, TX</li>
+          <li>Lake Charles, LA</li>
+        </ul>
+      </div>
+    </div>
+    <p class="family">
+      <span>A sister company to</span>
+      <a href="https://ammco.com/" target="_blank" rel="noopener" aria-label="AMMCO Solutions Group"><img src="assets/img/asg.webp" alt="AMMCO Solutions Group" width="800" height="218"></a>
+      <span>under the same ownership of</span>
+      <a href="https://magazinecapital.com/" target="_blank" rel="noopener" aria-label="Magazine Capital Management"><img src="assets/img/mcm.webp" alt="Magazine Capital Management" width="800" height="169"></a>
+    </p>
+    <p class="legal">&copy; 2026 AMMCO Grease &amp; Septic. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
